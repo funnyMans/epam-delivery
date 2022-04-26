@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Login to Food Delivery</title>
+  </head>
+  <body>
+    <main>
+      <div class="logo">
+        <img src="../../public/assets/foodfood.png" alt="food" />
+        <img src="../../public/assets/deliverydelivery.png" alt="delivery" />
+      </div>
+
+      <div class="login-title">
+        <h1>Login</h1>
+        <span
+          >Sign in with your data that you entered during your
+          registration.</span
+        >
+      </div>
+      <form action="../pages/index.html">
+        <label for="email">
+          <span>Email</span>
+          <input type="email" placeholder=" name@example.com" />
+        </label>
+        <label for="password">
+          <span>Password</span>
+          <input type="password" placeholder="  min 8 characters" />
+        </label>
+        <div class="keepAlive">
+          <input type="checkbox" checked />
+          <span>keep me loged in</span>
+        </div>
+        <button type="submit" href="../pages/index.html">Login</button>
+        <a href="#"><span>Forgot password</span></a>
+      </form>
+      <div class="signUpLink">
+        <span>Dont have an account ?</span>
+        <a href="#"><span>Sign up</span></a>
+      </div>
+    </main>
+    <script src="../scripts/login.js"></script>
+  </body>
+</html>

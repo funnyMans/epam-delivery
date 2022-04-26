@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    min-width: inherit;
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 0 2rem;
+}
+
+/************************** HEADER ********************/
+/************************** HEADER ********************/
+
+header {
+    /* position: sticky;
+    top: 0; */
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 3rem;
+}
+
+
+
+header > .logo {
+    max-width: 15vw;
+    display: flex;
+    flex-direction: column;
+}
+
+header > .searchBar,
+header > nav {
+    display: none;
+}
+
+header > .customer {
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+header > .customer > .userImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header > .customer > .userImg > img {
+    max-width: 70%;
+    border-radius: 10px;
+}
+
+header > .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+header > .menu > div {
+    width: 1rem;
+    border: 1px solid #83859C;
+}
+
+
+
+/************************** /HEADER ********************/
+/************************** MAIN CONTENT ********************/
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+main >.best-offers {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+main >.best-offers > .card {
+    display: flex;
+    flex-direction: column-reverse;
+
+}
+
+main >.best-offers > .card > div {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+main >.best-offers > .card > .offer-img {
+    align-self: center;
+}
+
+main > .offer-sm-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1rem 2rem;
+}
+main > .offer-sm-icons > .icon-card {
+    width: 5rem;
+    height: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid gray;
+    border-radius: 20px;
+}
+
+/************************** /MAIN CONTENT ********************/
+/************************** ASIDE CONTENT ********************/
+
+aside > .restourants,
+aside > .restourants > .rest-card  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+aside > .restourants > .rest-card > .rest-img > img{
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+

@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main,
+form,
+form > label,
+.logo {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  min-width: inherit;
+  min-height: 100vh;
+  padding: 2rem 2rem;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.logo:first-child {
+  width: 48px;
+  height: auto;
+}
+
+.login-title > h1 {
+  font-family: "Nunito";
+  font-style: normal;
+  font-size: 5rem;
+  font-weight: 1000;
+  line-height: 80px;
+  color: #2b2b43;
+}
+
+form {
+  min-height: fit-content;
+  gap: 2rem;
+}
+
+form > label > input {
+  min-height: 3rem;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  border: 1px solid #c7c8d2;
+}
+
+form > label:last-of-type > input {
+  display: inline-block;
+}
+
+form > .keepAlive {
+    display: flex;
+    gap: 1rem;
+}
+form > button {
+  padding: 12px 16px;
+  background-color: #4e60ff;
+  border-radius: 8px;
+}
+
+.signUpLink > a,
+form > a {
+  text-align: center;
+  list-style: none;
+  text-decoration: none;
+  color: #4e60ff;
+  font-family: "Nunito";
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.signUpLink{
+    text-align: center;
+}
+
