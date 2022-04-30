@@ -1,136 +1,316 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .container {
-    min-width: inherit;
-    min-height: inherit;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    padding: 0 2rem;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 1rem;
 }
 
 /************************** HEADER ********************/
 /************************** HEADER ********************/
 
 header {
-    /* position: sticky;
-    top: 0; */
-    min-height: 10vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    row-gap: 3rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  min-height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 3rem;
 }
 
-
-
 header > .logo {
-    max-width: 15vw;
-    display: flex;
-    flex-direction: column;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+header > .logo > img:first-child {
+  max-width: 70%;
 }
 
 header > .searchBar,
 header > nav {
-    display: none;
+  display: none;
+}
+
+header > .searchBar > input[type="search"] {
+  max-width: 10vw;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+header > nav > ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style-type: none;
+}
+
+header > nav > ul > li > a {
+  text-decoration: none;
+  cursor: pointer;
+  color: rgb(29, 27, 27);
+}
+
+header > nav > ul > li > a > span {
+  font-size: 1.3rem;
+}
+header > nav > ul > li > .divisor-div {
+  height: 1rem;
+  border: 1px solid rgba(29, 27, 27, 0.3);
 }
 
 header > .customer {
-    margin-left: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  padding-left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+header > .menu,
+header > .customer > .cart {
+  padding: 1rem 1rem;
+  color: #4e60ff;
+  background-color: #f3f4ff;
+  border-radius: 16px;
 }
 
 header > .customer > .userImg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header > .customer > .userImg > img {
-    max-width: 70%;
-    border-radius: 10px;
+  padding: 0.2rem 0.2rem;
+  max-width: 50px;
+  max-height: 50px;
+  border: 2px solid #edeef2;
+  border-radius: 16px;
 }
 
 header > .menu {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
 header > .menu > div {
-    width: 1rem;
-    border: 1px solid #83859C;
+  width: 1rem;
+  border: 1px solid #83859c;
 }
-
-
 
 /************************** /HEADER ********************/
 /************************** MAIN CONTENT ********************/
 main {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-main >.best-offers {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
+main > .best-offers {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
-main >.best-offers > .card {
-    display: flex;
-    flex-direction: column-reverse;
-
-}
-
-main >.best-offers > .card > div {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
+main > .best-offers > .card {
+  padding: 2rem 1rem 0;
+  display: flex;
+  flex-direction: column-reverse;
+  background: #f3f4ff;
+  border-radius: 16px;
 }
 
-main >.best-offers > .card > .offer-img {
-    align-self: center;
+main > .best-offers > .card > div {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+main > .best-offers > .card > .offer-img {
+  align-self: center;
+}
+main > .best-offers > .card > .offer-img > .rotate-left {
+  filter: drop-shadow(0px -12px 32px rgba(156, 155, 157, 0.16));
+  transform: rotate(-3.42deg);
+}
+
+main > .best-offers > .card > div > div > h2 {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 56px;
+  color: #4e60ff;
+}
+
+main > .best-offers > .card > div > div > .orange-title {
+  color: #fd6d22;
+}
+
+main > .best-offers > .card > div > p {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  color: #83859c;
+}
+
+main > .best-offers > .card > div > div > h3 {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  color: #2b2b43;
+}
+
+main > .best-offers > .pink-bg {
+  background-color: #fff3ed;
 }
 
 main > .offer-sm-icons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-    gap: 1rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1rem;
 }
 main > .offer-sm-icons > .icon-card {
-    width: 5rem;
-    height: 3.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    border: 2px solid gray;
-    border-radius: 20px;
+  width: 5rem;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 2px solid gray;
+  border-radius: 20px;
+}
+
+main > .offer-sm-icons > .sm-selected {
+  background-color: #f3f4ff;
+  border: 2px solid #4e60ff;
 }
 
 /************************** /MAIN CONTENT ********************/
 /************************** ASIDE CONTENT ********************/
+aside > .aside-title {
+  margin-bottom: 1rem;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+}
 
 aside > .restourants,
-aside > .restourants > .rest-card  {
+aside > .restourants > .rest-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+aside > .restourants > .rest-card {
+  border: 1px solid #edeef2;
+  border-radius: 16px;
+}
+
+aside > .restourants > .rest-card > .rest-img {
+  position: relative;
+}
+
+aside > .restourants > .rest-card > .rest-img > p {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 20px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #4e60ff;
+  border-top-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+aside > .restourants > .rest-card > .rest-img > img {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+aside > .restourants > .rest > .rest-info {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 20px;
+}
+
+aside > .restourants > .rest > .rest-info > .rest-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+header > .customer > .cart > .selected-icon,
+aside > .restourants > .rest > .rest-info > .rest-title > .selected-icon {
+  color: #4e60ff;
+}
+
+aside > .restourants > .rest > .rest-info > .rest-details,
+aside > .restourants > .rest > .rest-info > .sm-icons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+aside > .restourants > .rest > .rest-info > .sm-icons > div {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 14px 20px;
+  background-color: #edeef2;
+  border-radius: 100px;
+  font-size: 1.3rem;
+  font-weight: 550;
+}
+/************************** MEDIA ********************/
+/************************** MEDIA ********************/
+/************************** MEDIA ********************/
+
+@media only screen and (min-width: 768px) {
+  .container {
+    padding: 0 5rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  header {
+    padding: 0 5rem;
+  }
+  header > .searchBar,
+  header > nav {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
+  }
+  header > .menu {
+    display: none;
+  }
+
+  aside {
+    width: 25%;
+  }
+  main {
+    width: 70%;
+  }
 }
-
-
-aside > .restourants > .rest-card > .rest-img > img{
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-}
-
