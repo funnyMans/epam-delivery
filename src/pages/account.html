@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/account.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,16 +19,16 @@
     <title>Food Delivery</title>
   </head>
   <body>
-    <header>
-      <div class="logo">
+    <header class="major-header">
+      <div class="logo bounce">
         <img src="../../public/assets/foodfood.png" alt="food" />
         <img src="../../public/assets/deliverydelivery.png" alt="delivery" />
       </div>
       <div class="searchBar">
-        <input type="search" />
+        <input name="" type="search" />
       </div>
-      <nav>
-        <ul>
+      <nav class="main-nav">
+        <ul class="main-list">
           <li>
             <a href="./index.html"><span>Restaurants</span></a>
           </li>
@@ -44,7 +45,7 @@
       </nav>
       <div class="customer">
         <div class="cart">
-          <i class="fa-lg fas fa-archive"></i>
+          <span class="fa-lg fas fa-archive"></span>
         </div>
         <div class="userImg">
           <img src="../../public/assets/img.png" alt="user" />
@@ -59,40 +60,40 @@
     <div class="container">
       <aside class="settings">
         <h2 class="content-title">Settings</h2>
-        <article class="account selected-content">
-          <i class="fa-lg fas fa-user selected-icon"></i>
+        <div class="account selected-content">
+          <span class="fa-lg fas fa-user selected-icon"></span>
           <div class="art-title">
             <h3>Accounts</h3>
-            <p>Personal information</p>
+            <span>Personal information</span>
           </div>
-        </article>
-        <article class="address">
-          <i class="fa-lg fas fa-map"></i>
+        </div>
+        <div class="address">
+          <span class="fa-lg fas fa-map"></span>
           <div class="art-title">
             <h3>Address</h3>
-            <p>Shippings addresses</p>
+            <span>Shippings addresses</span>
           </div>
-        </article>
-        <article class="payment">
-          <i class="fa-lg fas fa-question"></i>
+        </div>
+        <div class="payment">
+          <span class="fa-lg fas fa-question"></span>
           <div class="art-title">
             <h3>Payment methods</h3>
-            <p>Connected credit cards</p>
+            <span>Connected credit cards</span>
           </div>
-        </article>
-        <article class="security">
-          <i class="fa-lg fas fa-lock"></i>
+        </div>
+        <div class="security">
+          <span class="fa-lg fas fa-lock"></span>
           <div class="art-title">
             <h3>Security</h3>
-            <p>Password, 2FA</p>
+            <span>Password, 2FA</span>
           </div>
-        </article>
+        </div>
       </aside>
       <main class="personal-info">
         <h2>Account</h2>
-        <article class="acc-card">
+        <div class="acc-card">
           <h4 class="content-title">Personal information</h4>
-          <p>avatar</p>
+          <span>avatar</span>
           <div class="user-intro">
             <div class="user-avatar">
               <img src="../../public/assets/img.png" alt="user image" />
@@ -101,64 +102,70 @@
             <button type="submit">remove</button>
           </div>
           <form action="../pages/login.html">
-            <label for="firstName">
+            <label name="" for="firstName">
               <span>First name</span>
-              <input type="text" value="Jane" /> </label
-            ><label for="lastName">
+              <input name="" type="text" value="Jane" /> </label
+            ><label name="" for="lastName">
               <span>Last name</span>
-              <input type="text" value="Robertson" /> </label
-            ><label for="email">
+              <input name="" type="text" value="Robertson" /> </label
+            ><label name="" for="email">
               <span>Email</span>
-              <input type="email" value="jane.robertson@example.com" />
+              <input name="" type="email" value="jane.robertson@example.com" />
             </label>
-            <label for="phone number">
+            <label name="" for="phone number">
               <span>Phone number</span>
-              <input type="number" value="217.5550113" />
+              <input name="" type="number" value="217.5550113" />
             </label>
             <fieldset>
               <legend>Email notifications</legend>
-              <label for="deals">
+              <label name="" for="deals">
                 <input
+                  name=""
                   type="checkbox"
                   name="favorite_pet"
                   value="New deals"
                   checked="true"
                 />New deals
               </label>
-              <label for="restaurants">
+              <label name="" for="restaurants">
                 <input
+                  name=""
                   type="checkbox"
                   name="favorite_pet"
                   value="New restaurants"
                   checked="true"
                 />New restaurants
               </label>
-              <label for="orders">
+              <label name="" for="orders">
                 <input
+                  name=""
                   type="checkbox"
                   name="favorite_pet"
                   value="Order statuses"
                   checked="true"
                 />Order statuses
               </label>
-              <label for="password">
+              <label name="" for="password">
                 <input
+                  name=""
                   type="checkbox"
                   name="favorite_pet"
                   value="Password changes"
                   checked="true"
                 />Passwordchanges
               </label>
-              <label for="offers">
+              <label name="" for="offers">
                 <input
+                  name=""
                   type="checkbox"
                   name="favorite_pet"
                   value="Special offers"
                   checked="true"
                 />Special offers
               </label>
-              <label for="news">
+              <label name="" for="news">
                 <input
+                  name=""
                   type="checkbox"
                   name="favorite_pet"
                   value="Newsletter"
@@ -175,7 +182,7 @@
               <button class="save-chgs" type="submit">Save changes</button>
             </div>
           </div>
-        </article>
+        </div>
       </main>
     </div>
     <script src="../scripts/index.js"></script>

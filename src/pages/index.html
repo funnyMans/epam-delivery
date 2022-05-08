@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,16 +20,16 @@
     <title>Food Delivery</title>
   </head>
   <body>
-    <header>
-      <div class="logo">
+    <header class="major-header">
+      <div class="logo bounce">
         <img src="../../public/assets/foodfood.png" alt="food" />
         <img src="../../public/assets/deliverydelivery.png" alt="delivery" />
       </div>
       <div class="searchBar">
-        <input type="search" />
+        <input name="search" type="search" />
       </div>
-      <nav>
-        <ul>
+      <nav class="main-nav">
+        <ul class="main-list">
           <li>
             <a href="./login.html"><span>Restaurants</span></a>
           </li>
@@ -44,7 +46,7 @@
       </nav>
       <div class="customer">
         <div class="cart">
-          <i class="fa-lg fas fa-archive"></i>
+          <span class="fa-lg fas fa-archive"></span>
         </div>
         <div class="userImg">
           <img src="../../public/assets/img.png" alt="user" />
@@ -57,79 +59,77 @@
       </div>
     </header>
     <div class="container">
-      <main>
-        <section class="best-offers">
-          <article class="desert-info card">
-            <div class="offer-img">
+      <main class="mainContent">
+        <div class="best-offers">
+          <div class="desert-info card">
+            <div class="deserts-details cardContent">
+              <div class="cardContentDetails">
+                <h3>All Deserts</h3>
+                <h2>20% OFF</h2>
+              </div>
+            </div>
+            <div class="offer-img cardContent flip">
               <img
                 src="../../public/assets/cake.png"
                 alt="cake"
                 class="rotate-left"
               />
             </div>
-            <div class="deserts-details">
-              <div>
-                <h3>All Deserts</h3>
-                <h2>20% OFF</h2>
-              </div>
-              <p>Desserty</p>
-            </div>
-          </article>
-          <article class="burgers-info card pink-bg">
-            <div class="offer-img">
-              <img src="../../public/assets/burger.png" alt="burger" />
-            </div>
-            <div class="burgers-details">
-              <div>
+          </div>
+          <div class="burgers-info card pink-bg">
+            <div class="burgers-details cardContent">
+              <div class="cardContentDetails">
                 <h3>Big Burgers</h3>
                 <h2 class="orange-title">50% OFF</h2>
               </div>
-              <p>Fooddies</p>
             </div>
-          </article>
-        </section>
-        <section class="offer-sm-icons">
-          <div class="icon-card sm-pizza">
+            <div class="offer-img cardContent flip">
+              <img src="../../public/assets/burger.png" alt="burger" />
+            </div>
+          </div>
+        </div>
+        <div class="offer-sm-icons">
+          <a href="#" class="icon-card sm-pizza">
             <img src="../../public/assets/pizza.png" alt="pizza" />
             <span>pizza</span>
-          </div>
-          <div class="icon-card sm-burger sm-selected">
+          </a>
+          <a href="#" class="icon-card sm-burger sm-selected">
             <img src="../../public/assets/smBurger.png" alt="pizza" />
             <span>burger</span>
-          </div>
-          <div class="icon-card sm-bbq">
+          </a>
+          <a href="#" class="icon-card sm-bbq">
             <img src="../../public/assets/meat.png" alt="pizza" />
             <span>meat</span>
-          </div>
-          <div class="icon-card sm-sushi sm-selected">
+          </a>
+          <a href="#" class="icon-card sm-sushi sm-selected">
             <img src="../../public/assets/sushi.png" alt="pizza" />
             <span>sushi</span>
-          </div>
-          <div class="icon-card sm-broccoli">
+          </a>
+          <a href="#" class="icon-card sm-broccoli">
             <img src="../../public/assets/broccoli.png" alt="pizza" />
             <span>broccoli</span>
-          </div>
-          <div class="icon-card sm-cake">
+          </a>
+          <a href="#" class="icon-card sm-cake">
             <img src="../../public/assets/smCake.png" alt="pizza" />
             <span>cake</span>
-          </div>
-        </section>
+          </a>
+        </div>
       </main>
-      <aside>
+      <aside class="asideContent">
         <h2 class="aside-title">Nearby Restaurants:</h2>
-        <section class="restourants">
-          <article class="rest rest-card">
+        <div class="restourants">
+          <div class="rest rest-card">
             <div class="rest-img">
-              <p>featured</p>
+              <span>featured</span>
               <img src="../../public/assets/royal.png" alt="royal" />
             </div>
             <div class="rest-info">
               <div class="rest-title">
                 <h4>Rest Name</h4>
-                <i class="fa-lg fas fa-archive"></i>
+                <span class="fa-lg fas fa-archive"></span>
               </div>
               <div class="rest-details">
-                <i class="fas fa-clock"><span> 30-40 min</span></i>
+                <span class="fas fa-clock"><span> 30-40 min</span></span>
                 <ul>
                   <li>$32 min sum</li>
                 </ul>
@@ -141,19 +141,19 @@
                 </div>
               </div>
             </div>
-          </article>
-          <article class="rest rest-card">
+          </div>
+          <div class="rest rest-card">
             <div class="rest-img">
-              <p>featured</p>
+              <span>featured</span>
               <img src="../../public/assets/restBurg.png" alt="rest burger" />
             </div>
             <div class="rest-info">
               <div class="rest-title">
                 <h4>Rest Name</h4>
-                <i class="fa-lg fas fa-archive selected-icon"></i>
+                <span class="fa-lg fas fa-archive selected-icon"></span>
               </div>
               <div class="rest-details">
-                <i class="fas fa-clock"><span> 30-40 min</span></i>
+                <span class="fas fa-clock"><span> 30-40 min</span></span>
                 <ul>
                   <li>$32 min sum</li>
                 </ul>
@@ -172,19 +172,19 @@
                 </div>
               </div>
             </div>
-          </article>
-          <article class="rest rest-card">
+          </div>
+          <div class="rest rest-card">
             <div class="rest-img">
-              <p>featured</p>
+              <span>featured</span>
               <img src="../../public/assets/ninja.png" alt="ninja" />
             </div>
             <div class="rest-info">
               <div class="rest-title">
                 <h4>Rest Name</h4>
-                <i class="fa-lg fas fa-archive"></i>
+                <span class="fa-lg fas fa-archive"></span>
               </div>
               <div class="rest-details">
-                <i class="fas fa-clock"><span> 30-40 min</span></i>
+                <span class="fas fa-clock"><span> 30-40 min</span></span>
                 <ul>
                   <li>$32 min sum</li>
                 </ul>
@@ -196,8 +196,8 @@
                 </div>
               </div>
             </div>
-          </article>
-        </section>
+          </div>
+        </div>
       </aside>
     </div>
     <script src="../scripts/index.js"></script>

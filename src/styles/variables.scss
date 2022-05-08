@@ -1,0 +1,91 @@
+@mixin root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+@mixin column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+@mixin container {
+  @include row;
+  @media only screen and (max-width: 800px) {
+    @include column;
+  }
+}
+
+@mixin keyframes-flip($name) {
+  @keyframes #{$name} {
+    0% {
+      transform: rotateY(0);
+      animation-timing-function: ease-out;
+    }
+    40% {
+      transform: rotateY(170deg);
+      animation-timing-function: ease-out;
+    }
+    50% {
+      transform: rotateY(190deg) scale(1);
+      animation-timing-function: ease-out;
+    }
+    80% {
+      transform: rotateY(360deg) scale(0.95);
+      animation-timing-function: ease-in;
+    }
+    100% {
+      transform: scale(1);
+      animation-timing-function: ease-in;
+    }
+  }
+}
+
+@mixin keyframes-bounce($name) {
+  @keyframes #{$name} {
+    0% {
+      transform: translateY(0);
+    }
+    20% {
+      opacity: 1;
+      transform: translateY(-20px);
+    }
+    50% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+@mixin animations-flip {
+  @include keyframes-flip(flip);
+
+  .flip {
+    animation-name: flip;
+    animation-duration: 17s;
+    backface-visibility: visible !important;
+  }
+}
+
+@mixin animations-bounce {
+  @include keyframes-bounce(bounce);
+
+  .bounce {
+    animation-name: bounce;
+    animation-duration: 7s;
+    backface-visibility: visible !important;
+  }
+}
