@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/account.css" />
-    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/account/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,21 +18,21 @@
     <title>Food Delivery</title>
   </head>
   <body>
-    <header class="major-header">
+    <header class="main-header">
       <div class="logo bounce">
-        <img src="../../public/assets/foodfood.png" alt="food" />
-        <img src="../../public/assets/deliverydelivery.png" alt="delivery" />
+        <img src="../../public/assets/mainLogo.png" alt="food" />
       </div>
-      <div class="searchBar">
-        <input name="" type="search" />
+      <div class="search-bar">
+        <input name="search" type="search" class="main-search" />
+        <button type="submit" class="search-btn">Search</button>
       </div>
       <nav class="main-nav">
         <ul class="main-list">
           <li>
-            <a href="./index.html"><span>Restaurants</span></a>
+            <a href="./login.html"><span>Restaurants</span></a>
           </li>
           <li>
-            <a href="login.html"><span>Deals</span></a>
+            <a href="./account.html"><span>Deals</span></a>
           </li>
           <li>
             <div class="divisor-div"></div>
@@ -45,7 +44,7 @@
       </nav>
       <div class="customer">
         <div class="cart">
-          <span class="fa-lg fas fa-archive"></span>
+          <span class="fa-lg fas fa-archive fa-2x"></span>
         </div>
         <div class="userImg">
           <img src="../../public/assets/img.png" alt="user" />
@@ -57,32 +56,32 @@
         <div></div>
       </div>
     </header>
-    <div class="container">
+    <div class="main-container">
       <aside class="settings">
         <h2 class="content-title">Settings</h2>
-        <div class="account selected-content">
-          <span class="fa-lg fas fa-user selected-icon"></span>
+        <div class="account set-card">
+          <span class="fas fa-address-card fa-2x bounce"></span>
           <div class="art-title">
             <h3>Accounts</h3>
             <span>Personal information</span>
           </div>
         </div>
-        <div class="address">
-          <span class="fa-lg fas fa-map"></span>
+        <div class="address set-card">
+          <span class="fas fa-map-marker-alt fa-2x bounce"></span>
           <div class="art-title">
             <h3>Address</h3>
             <span>Shippings addresses</span>
           </div>
         </div>
-        <div class="payment">
-          <span class="fa-lg fas fa-question"></span>
+        <div class="payment set-card">
+          <span class="fas fa-credit-card fa-2x bounce"></span>
           <div class="art-title">
             <h3>Payment methods</h3>
             <span>Connected credit cards</span>
           </div>
         </div>
-        <div class="security">
-          <span class="fa-lg fas fa-lock"></span>
+        <div class="security set-card">
+          <span class="fas fa-shield-alt fa-2x bounce"></span>
           <div class="art-title">
             <h3>Security</h3>
             <span>Password, 2FA</span>
@@ -90,31 +89,51 @@
         </div>
       </aside>
       <main class="personal-info">
-        <h2>Account</h2>
-        <div class="acc-card">
+        <h2 class="content-title">Account</h2>
+        <div class="user-card">
           <h4 class="content-title">Personal information</h4>
           <span>avatar</span>
           <div class="user-intro">
-            <div class="user-avatar">
+            <div class="user-avatar bounceInDown">
               <img src="../../public/assets/img.png" alt="user image" />
             </div>
-            <button type="submit">change</button>
-            <button type="submit">remove</button>
+            <button type="submit" class="submit-btn">change</button>
+            <button type="submit" class="remove-btn">remove</button>
           </div>
-          <form action="../pages/login.html">
-            <label name="" for="firstName">
-              <span>First name</span>
-              <input name="" type="text" value="Jane" /> </label
+          <form action="../pages/login.html" class="user-form">
+            <label for="firstName">
+              <span>First name: </span>
+              <input
+                id="firstName"
+                name="firstName"
+                type="text"
+                placeholder="Jane"
+              /> </label
             ><label name="" for="lastName">
-              <span>Last name</span>
-              <input name="" type="text" value="Robertson" /> </label
-            ><label name="" for="email">
-              <span>Email</span>
-              <input name="" type="email" value="jane.robertson@example.com" />
+              <span>Last name: </span>
+              <input
+                id="lastName"
+                name="lastName"
+                type="text"
+                placeholder="Robertson"
+              /> </label
+            ><label for="email">
+              <span>Email: </span>
+              <input
+                id="email"
+                name=""
+                type="email"
+                placeholder="jane.robertson@example.com"
+              />
             </label>
-            <label name="" for="phone number">
-              <span>Phone number</span>
-              <input name="" type="number" value="217.5550113" />
+            <label for="phoneNumber">
+              <span>Phone number: </span>
+              <input
+                id="phoneNumber"
+                name=""
+                type="number"
+                placeholder="217.5550113"
+              />
             </label>
             <fieldset>
               <legend>Email notifications</legend>
@@ -174,10 +193,11 @@
               </label>
             </fieldset>
           </form>
-          <div class="handler-btns">
-            <button class="logout-btn" type="submit">Log out</button>
-            <div class="underline"></div>
-            <div class="handle-changes">
+          <div class="btns-wrapper">
+            <button class="logout-btn" type="submit" class="logout-btn">
+              Log out
+            </button>
+            <div class="control-btns">
               <button class="discard-chgs" type="reset">Discard changes</button>
               <button class="save-chgs" type="submit">Save changes</button>
             </div>
